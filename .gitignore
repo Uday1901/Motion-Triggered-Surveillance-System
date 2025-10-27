@@ -1,4 +1,4 @@
 video/
 img/
-.xml*
-.yaml*
+*.xml
+*.yaml
