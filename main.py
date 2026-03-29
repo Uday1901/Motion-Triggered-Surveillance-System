@@ -12,12 +12,22 @@ def _bootstrap_src_path() -> None:
         sys.path.insert(0, str(src_dir))
 
 
-def main() -> None:
+def main() -> int:
     _bootstrap_src_path()
-    from ui.app import main as ui_main  # noqa: WPS433 (late import for bootstrap)
+    try:
+        from ui.app import main as ui_main  # noqa: WPS433 (late import for bootstrap)
+    except Exception as exc:  # pragma: no cover - startup diagnostics
+        print(
+            "[ERROR] Failed to start UI. Install dependencies with "
+            "'pip install -r requirements.txt'.",
+            file=sys.stderr,
+        )
+        print(f"[ERROR] Details: {exc}", file=sys.stderr)
+        return 1
 
     ui_main()
+    return 0
 
 
 if __name__ == "__main__":  # pragma: no cover - script entry
-    main()
+    raise SystemExit(main())
