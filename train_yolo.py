@@ -1,4 +1,4 @@
-"""Utility to train YOLO models (e.g., YOLO12) for the surveillance system."""
+"""Utility to train YOLO models for the surveillance system."""
 
 import argparse
 import os
@@ -6,15 +6,15 @@ import os
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Train a YOLO model (YOLO12 or compatible) using Ultralytics"
+        description="Train a YOLO model using Ultralytics"
     )
     parser.add_argument(
         "--model",
         type=str,
-        default="yolo12.yaml",
+        default="yolov8n.pt",
         help=(
             "Path or name of the model definition/weights. "
-            "Use a .yaml architecture (e.g., yolo12.yaml) or pre-trained .pt weights (e.g., yolov12n.pt)."
+            "Use a .yaml architecture (for scratch training) or pre-trained .pt weights."
         ),
     )
     parser.add_argument(
@@ -37,7 +37,9 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--img-size",
+        "--imgsz",
         type=int,
+        dest="img_size",
         default=640,
         help="Image size to train on (default: 640).",
     )
@@ -50,8 +52,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--name",
         type=str,
-        default="yolo12-custom",
-        help="Run name used inside Ultralytics runs directory (default: yolo12-custom).",
+        default="surveillance-custom",
+        help="Run name used inside Ultralytics runs directory (default: surveillance-custom).",
     )
     parser.add_argument(
         "--project",
