@@ -7,9 +7,10 @@ Computer Vision
 Motion-Triggered Surveillance System
 
 ## Student Details
-- Name: `<Your Name>`
-- Registration Number: `<Your Reg. No.>`
-- Program/Semester: `<Your Program>`
+- Name: `Uday Upadhyay`
+- Registration Number: `22MIIM10090`
+- Course Code: `CSE3010`
+- Slot: `B21+E14`
 - Submission Date: `March 31, 2026`
 - GitHub Repository: `https://github.com/Uday1901/Motion-Triggered-Surveillance-System`
 
@@ -92,10 +93,17 @@ Use this section for your actual testing evidence.
 5. Low-light condition
 
 ### 7.3 Results Summary (Fill With Your Values)
+<<<<<<< HEAD
 - Detection start latency: `~0.28 s` average (from object entering frame to recording trigger)
 - Average event clip duration: `~12.6 s` per event (including post-detection delay buffer)
 - False triggers observed: `~6.7%` (`4` false triggers in `60` detected events)
 - Storage reduction vs continuous recording: `~81%` lower storage for the same monitoring duration
+=======
+- Detection start latency: `~0.28 s average`
+- Average event clip duration: `~12.6 s per event`
+- False triggers observed: `~6.7% (4 in 60 events)`
+- Storage reduction vs continuous recording: `~81%`
+>>>>>>> a8110a699a3078a09d483b02ef239d2d7c3e6a25
 
 ### 7.4 Qualitative Findings
 - Haar mode is faster and lightweight but less robust in complex scenes.
