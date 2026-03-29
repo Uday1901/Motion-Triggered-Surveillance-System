@@ -8,7 +8,7 @@ Motion-Triggered Surveillance System
 
 ## Student Details
 - Name: `Uday Upadhyay`
-- Registration Number: `22MIIM10090`
+- Registration Number: `22MIM10090`
 - Course Code: `CSE3010`
 - Slot: `B21+E14`
 - Submission Date: `March 31, 2026`
